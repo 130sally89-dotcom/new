@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>안녕하세요</title>
+</head>
+<body>
+  <p style="color: blue;">안녕하세요</p>
+  <button onclick="alert('안녕하세요 반갑습니다')">클릭</button>
+
+  <div id="gallery" style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px;"></div>
+
+  <script>
+    var gallery = document.getElementById('gallery');
+    for (var n = 1; n <= 10; n++) {
+      var box = document.createElement('div');
+      box.style.textAlign = 'center';
+      box.innerHTML =
+        '<img src="jeju-tree.jpg" alt="제주 귤 뽑기 화면 ' + n + '" width="120"><br>' +
+        '<button type="button" onclick="alert(' + n + ' + \'번 버튼을 눌렀습니다\')">' + n + '</button>';
+      gallery.appendChild(box);
+    }
+  </script>
+</body>
+</html>
